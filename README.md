@@ -1,2 +1,2 @@
 # 5k-stars-nocode
-Getting 5k stars without code
+Getting 5k stars without code (1/5000)
