@@ -1,7 +1,7 @@
 # 5k-stars-nocode
-Собираю 5к звёзд без кода (14/5000)
+Getting 5к stars without code (14/5000)
 
-## Звезды
+## Stars
 
 1. [@notkvizyx](https://github.com/notkvizyx)
 2. [@crashmax-dev](https://github.com/crashmax-dev)
