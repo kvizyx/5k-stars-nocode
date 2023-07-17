@@ -1,5 +1,5 @@
 # 5k-stars-nocode
-Собираю 5к звёзд без кода (12/5000)
+Собираю 5к звёзд без кода (14/5000)
 
 ## Звезды
 
@@ -15,3 +15,5 @@
 10. [@tonysmaryn](https://github.com/tonysmaryn)
 11. [@h1ebushek](https://github.com/h1ebushek)
 12. [@nekurillril](https://github.com/nekurillril)
+13. [@sygeman](https://github.com/sygeman)
+14. [@qubids](https://github.com/qubids)
