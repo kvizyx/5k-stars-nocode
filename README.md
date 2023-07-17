@@ -13,3 +13,4 @@
 8. [@jange4ik](https://github.com/jange4ik)
 9. [@Mershana](https://github.com/Mershana)
 9. [@tonysmaryn](https://github.com/tonysmaryn)
+10. [@notkvizyx](https://github.com/notkvizyx)
