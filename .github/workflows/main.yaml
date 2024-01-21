@@ -1,0 +1,29 @@
+name: Update Stargazers List
+
+on:
+  schedule:
+    - cron: "00 01,12 * * *"
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    name: Run JS script & update README.md
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run index.js
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: node index.js
+
+      - name: Commit README.md
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "README.md"
+          message: "Update stargazers list"
