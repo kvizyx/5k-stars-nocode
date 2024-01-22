@@ -1,21 +1,19 @@
-name: Update Stargazers List
+name: Update List
 
 on:
   schedule:
-    - cron: "00 01,12 * * *"
+    - cron: "0 * * * *"
 
 jobs:
   main:
     runs-on: ubuntu-latest
-    name: Run JS script & update README.md
+    name: Run index.js & Update README.md
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
-        with:
-          node-version: 20
 
       - name: Run index.js
         env:

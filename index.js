@@ -12,7 +12,7 @@ async function updateStargazersList() {
 	try {
 		const readReadme = readFileSync("README.md", "utf8");
 
-		readmeData = readReadme.replace(/- \[\w.+]\(\w.+\)/gm, "").trimEnd();
+		readmeData = readReadme.replace(/^\d+\. \[@.*]\(.*\)/gm, "").trimEnd();
 	} catch (err) {
 		throw new Error(err);
 	}
@@ -22,7 +22,7 @@ async function updateStargazersList() {
 			headers: { Authorization: `Bearer ${GH_TOKEN}`, Accept: "application/json" },
 		});
 
-		if (request.status === 403 || request.status === 429) {
+		if (request.status === 403 || request.status === 429 || request.status === 401) {
 			throw new Error(`Request failed with status code ${request.status} (${request.statusText})`);
 		}
 
@@ -37,8 +37,8 @@ async function updateStargazersList() {
 		CURRENT_PAGE++;
 	}
 
-	const updatedStargazers = stargazersFetched.map((x, i) => `${i++}. [@${x.login}](${x.html_url})`).join("\n");
-	const updatedDescription = readmeData.replace(/\d.\//g, `${updatedStargazers.length}/`);
+	const updatedStargazers = stargazersFetched.map((x, i) => `${i + 1}. [@${x.login}](${x.html_url})`).join("\n");
+	const updatedDescription = readmeData.replace(/\d+\//gm, `${stargazersFetched.length}/`);
 
 	writeFileSync("README.md", `${updatedDescription}\n\n${updatedStargazers}\n`, "utf8");
 }
