@@ -1,6 +1,6 @@
 # 5k-stars-nocode
 
-Getting 5к stars without code (15/5000).
+Getting 5к stars without code (16/5000).
 
 ## Stars
 
@@ -19,3 +19,4 @@ Getting 5к stars without code (15/5000).
 13. [@MIMBOL228](https://github.com/MIMBOL228)
 14. [@Anaylan](https://github.com/Anaylan)
 15. [@vsecoder](https://github.com/vsecoder)
+16. [@sh1nkey](https://github.com/sh1nkey)
